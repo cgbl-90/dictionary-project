@@ -1,12 +1,65 @@
+/* App.js */
+
+* {
+  font-family: 'Space Mono', monospace;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+a,
+a:checked {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo {
   width: 100px;
   pointer-events: none;
   margin: 30px;
 }
 
-.header {
+footer {
+  margin: 30px;
+}
+
+header {
   display: flex;
-  width: 100v;
   flex-direction: row;
-  place-items: center;
+  justify-content: space-around;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: rgb(248, 242, 234);
+  border-radius: 10px;
+}
+
+/* Search.js */
+
+.btn-group {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: transparent;
+  font-style: inherit;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.btn {
+  background-color: transparent;
+  font-style: inherit;
+  border: none;
+  font-weight: 700;
 }

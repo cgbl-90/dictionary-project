@@ -1,12 +1,35 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Search from "./Search";
 
 function App() {
   return (
     <div className="app">
-      <header className="header">
-        <img src={logo} className="logo" alt="logo" />
+      <header>
+        <img src={logo} className="logo" alt="logo" /><h1>.dictionary.</h1>
       </header>
+      <main>
+        <Search />
+      </main>
+      <footer>
+        <p>
+          <a
+            href="https://github.com/cgbl-90/dictionary-project"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open-course code
+          </a>{" "}
+          by{" "}
+          <a
+            href="https://www.linkedin.com/in/cgbl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Carmen López
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
