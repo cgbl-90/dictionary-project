@@ -8,7 +8,7 @@ import Description from "./Description";
 */
 
 export default function Search() {
-  let [keyword, setKeyword] = useState(String);
+  let [keyword, setKeyword] = useState("");
   let [definition, setDefinition] = useState(null);
   const apiKey = `28e2d780-8e37-4805-a70e-8a22e8bc93b9`;
   const call = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;

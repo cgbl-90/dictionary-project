@@ -5,13 +5,14 @@ import Search from "./Search";
 function App() {
   return (
     <div className="app">
-      <header>
-        <img src={logo} className="logo" alt="logo" /><h1>.dictionary.</h1>
+      <header className="box">
+        <img src={logo} className="logo" alt="logo" />
+        <h1>.dictionary.</h1>
       </header>
       <main>
         <Search />
       </main>
-      <footer>
+      <footer className="box">
         <p>
           <a
             href="https://github.com/cgbl-90/dictionary-project"
@@ -27,6 +28,16 @@ function App() {
             rel="noopener noreferrer"
           >
             Carmen López
+          </a>
+        </p>
+        <p className="text-right">
+          Powered by{" "}
+          <a
+            href="https://dictionaryapi.com/products/json"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Merriam-Webster Dictionary API
           </a>
         </p>
       </footer>

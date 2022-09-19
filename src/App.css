@@ -2,6 +2,8 @@
 
 * {
   font-family: 'Space Mono', monospace;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -25,15 +27,15 @@ footer {
   margin: 30px;
 }
 
-header {
+.box {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 main {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 100px auto;
   min-height: 100vh;
   background-color: rgb(248, 242, 234);
   border-radius: 10px;
@@ -62,9 +64,24 @@ input {
   font-style: inherit;
   border: none;
   font-weight: 700;
+  padding-left: 15px;
+}
+
+.btn:hover,
+.btn:hover {
+  color: aquamarine;
 }
 
 /* Description.js */
+
+.description {
+  margin: 10px;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 10px;
+}
 
 h4 {
   text-align: left;
@@ -72,8 +89,22 @@ h4 {
   text-decoration: overline;
 }
 
-h6 {
+h6,
+h5 {
   text-align: left;
   padding: 0px 10px;
   margin: 1px;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  line-height: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.small-definitions {
+  padding-left: 30px;
 }
