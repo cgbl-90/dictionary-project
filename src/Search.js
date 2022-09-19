@@ -34,7 +34,7 @@ export default function Search() {
         <button className="btn">search</button>
       </form>
       <section className="description">
-        <Description description={definition} />
+        <Description description={definition} keyword={keyword} />
       </section>
     </div>
   );

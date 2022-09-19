@@ -74,6 +74,15 @@ input {
 
 /* Description.js */
 
+.warning {
+  background-color: rgb(247, 146, 146);
+  padding: 5px 20px;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
 .description {
   margin: 10px;
 }

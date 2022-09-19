@@ -6,12 +6,18 @@ import Picture from "./Picture";
 export default function Description(definition) {
   if (definition.description === null) return " ";
   else {
-    console.log(definition);
     return (
       <div className="description">
         <br />
+        {definition.description[0].meta.offensive ? (
+          <h6 className="warning">This word may be offensive</h6>
+        ) : (
+          ""
+        )}
+        <br />
         <h2>
-          {definition.description[0].hwi.hw} (
+          {definition.description[0].meta.id.split(":1")} (
+          {definition.description[0].hwi.hw}) (
           {definition.description[0].hwi.prs[0].mw})
           <Audio value={definition.description[0].hwi.prs[0].sound.audio} />
         </h2>
@@ -24,13 +30,13 @@ export default function Description(definition) {
           </h5>
         </em>
         <br />
-        <Picture value={definition.description[0].meta.id} />
+        <Picture keyword={definition.description[0].meta.id.split(":1")} />
         <br />
         {definition.description.map((singleDefinition, a) => {
           return (
             <article>
-              <h4 key={a}>
-                {a + 1} {singleDefinition.fl}
+              <h4 key={a} className="badge">
+                {singleDefinition.fl}
               </h4>
               {singleDefinition.shortdef.map((element, b) => {
                 return (
@@ -43,12 +49,6 @@ export default function Description(definition) {
             </article>
           );
         })}
-        <br />
-        {definition.description[0].meta.offensive === true ? (
-          <h6>This word is marked as offensive</h6>
-        ) : (
-          ""
-        )}
         <br />
       </div>
     );
