@@ -14,7 +14,7 @@ export default function Search() {
   const apiKey = `28e2d780-8e37-4805-a70e-8a22e8bc93b9`;
   const call = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=${apiKey}`;
   const pexelsKey = "563492ad6f91700001000001f20ea2971b8b4acf94ca44aa20ac0324";
-  const pexelsCall = `https://api.pexels.com/v1/search?query=${keyword}&per_page=3`;
+  const pexelsCall = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
 
   function searchPictures() {
     axios
@@ -28,10 +28,13 @@ export default function Search() {
 
   function SearchKeyword(event) {
     event.preventDefault();
-    axios.get(call).then((props) => {
-      setDefinition(props.data);
-      searchPictures();
-    });
+    axios
+      .get(call)
+      .then((props) => {
+        setDefinition(props.data);
+        searchPictures();
+      })
+      .catch((event) => event.preventDefault());
   }
 
   function updateKeyword(event) {

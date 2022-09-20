@@ -6,12 +6,6 @@ export default function Description(definition) {
   return (
     <article className="description">
       <br />
-      {definition.description[0].meta.offensive ? (
-        <h6 className="warning">This word may be offensive</h6>
-      ) : (
-        ""
-      )}
-      <br />
       <h2>
         {definition.description[0].meta.id.split(":1")} (
         {definition.description[0].hwi.hw}) (
@@ -44,6 +38,12 @@ export default function Description(definition) {
           </article>
         );
       })}
+      <br />
+      {definition.description[0].meta.offensive ? (
+        <h6 className="warning">This word may be offensive</h6>
+      ) : (
+        ""
+      )}
       <br />
     </article>
   );
