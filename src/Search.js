@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import Description from "./Description";
-import Picture from "./Picture";
 
 /*
     Json: https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=28e2d780-8e37-4805-a70e-8a22e8bc93b9 
@@ -50,7 +49,20 @@ export default function Search() {
         {definition !== null ? <Description description={definition} /> : " "}
       </section>
       <section className="album">
-        {photos !== null ? <Picture photos={photos} /> : " "}
+        {photos !== null
+          ? photos.data.photos.map((pic, index) => {
+              return (
+                <a
+                  id={index}
+                  href={pic.src.original}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img class="fit-picture" src={pic.src.tiny} alt={pic.alt} />
+                </a>
+              );
+            })
+          : " "}
       </section>
     </div>
   );
