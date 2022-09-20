@@ -30,7 +30,9 @@ export default function Description(definition) {
           </h5>
         </em>
         <br />
-        <Picture keyword={definition.description[0].meta.id.split(":1")} />
+        <div className="album">
+          <Picture keyword={definition.description[0].meta.id.split(":1")} />
+        </div>
         <br />
         {definition.description.map((singleDefinition, a) => {
           return (

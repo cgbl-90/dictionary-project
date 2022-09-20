@@ -117,3 +117,13 @@ h5 {
 .small-definitions {
   padding-left: 30px;
 }
+
+/* Album */
+
+.fit-picture {
+  max-width: 400px;
+  border: 10px solid rgb(249, 75, 75);
+  border-radius: 15px;
+  margin: 0.8rem;
+  width: 100%;
+}
