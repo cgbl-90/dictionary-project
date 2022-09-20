@@ -32,6 +32,7 @@ export default function Search() {
       .get(call)
       .then((props) => {
         setDefinition(props.data);
+        console.log(definition);
         searchPictures();
       })
       .catch((event) => event.preventDefault());
@@ -45,7 +46,7 @@ export default function Search() {
     <div>
       <h1>.word.</h1>
       <form className="btn-group" onSubmit={SearchKeyword}>
-        <input type="search" onChange={updateKeyword} />
+        <input type="text" pattern="[a-zA-Z]+" onChange={updateKeyword} />
         <button className="btn">search</button>
       </form>
       <section className="description">
