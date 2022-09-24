@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## DEMO
+
+https://react-dictionary-by-cgbl.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -19,4 +23,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 This application uses data from Merriam-Webster's Collegiate Dictionary with Audio
 
 Dictionary APIs: https://dictionaryapi.com/products/index
+
 Documentation: https://dictionaryapi.com/products/json
