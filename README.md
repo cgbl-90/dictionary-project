@@ -25,3 +25,5 @@ This application uses data from Merriam-Webster's Collegiate Dictionary with Aud
 Dictionary APIs: https://dictionaryapi.com/products/index
 
 Documentation: https://dictionaryapi.com/products/json
+
+![image](https://user-images.githubusercontent.com/58992828/192622016-2471917a-1554-4300-ad82-5a9d2ebb3e66.png)
